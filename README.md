@@ -404,9 +404,9 @@ This project is a Streamlit-based web application that evaluates AI-generated re
    - The reward model for scoring is loaded from the `reward_model` directory.
    - The state dictionary (`reward_model.pth`) is loaded into the reward model.
    - The text generation model (GPT-2) is loaded for generating responses.
-![Screenshot of the application](Screenshot (464).png)
-![Screenshot of the application](Screenshot (465).png)
-![Screenshot of the application](Screenshot (464).png)
+![Screenshot of the application](Screenshot_(464).png)
+![Screenshot of the application](Screenshot_(465).png)
+![Screenshot of the application](Screenshot_(464).png)
 4. **Response Generation and Scoring**:
    - The user inputs a prompt into a text area.
    - Upon clicking the "Evaluate Response" button, the application generates a response using the GPT-2 model.
