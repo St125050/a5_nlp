@@ -118,4 +118,4 @@ if st.button("🔍 Evaluate Response"):
             st.markdown("<p style='text-align:center; font-size:1.2rem; background:#dc3545; color:#fff; padding:10px; border-radius:10px;'>❌ AI finds this response less relevant.</p>", unsafe_allow_html=True)
 
 # 🌟 Footer with Your Name & ID
-st.markdown("<p class='footer'>Built with ❤️ using Streamlit & PyTorch. <br> <strong>Created by Ponkrit ST124960</strong></p>", unsafe_allow_html=True)
+st.markdown("<p class='footer'>Built with ❤️ using Streamlit & PyTorch. <br> <strong>Created by St125050</strong></p>", unsafe_allow_html=True)
