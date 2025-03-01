@@ -380,7 +380,72 @@ To run the Streamlit app locally:
    ```sh
    streamlit run app.py
    ```
+# AI Response Evaluator
 
+This project is a Streamlit-based web application that evaluates AI-generated responses to user prompts. The application uses a pretrained GPT-2 model for generating responses and a sequence classification model for scoring the relevance of these responses.
+
+## Features
+
+- Generate AI responses to user-provided prompts.
+- Evaluate the relevance of AI responses using a scoring model.
+- User-friendly interface with modern and professional design.
+- Automatically downloads necessary model files if not present.
+
+## How It Works
+
+1. **Model Initialization**:
+   - The application checks if the required model files (`config.json`, `pytorch_model.bin`, `special_tokens_map.json`, `tokenizer_config.json`, `tokenizer.json`, `vocab.json`) are present in the `reward_model` directory.
+   - If the files are missing, they are automatically downloaded using the `transformers` library.
+
+2. **Device Setup**:
+   - The application sets up the device for computation, defaulting to GPU if available, otherwise using CPU.
+
+3. **Model Loading**:
+   - The reward model for scoring is loaded from the `reward_model` directory.
+   - The state dictionary (`reward_model.pth`) is loaded into the reward model.
+   - The text generation model (GPT-2) is loaded for generating responses.
+![Screenshot of the application](images/screenshot.png)
+![Screenshot of the application](images/screenshot.png)
+![Screenshot of the application](images/screenshot.png)
+4. **Response Generation and Scoring**:
+   - The user inputs a prompt into a text area.
+   - Upon clicking the "Evaluate Response" button, the application generates a response using the GPT-2 model.
+   - The generated response is then scored for relevance using the reward model.
+   - The score is converted into a probability to indicate the relevance of the response.
+
+5. **User Interface**:
+   - The application features a modern and professional design with custom CSS.
+   - The interface includes a header, a text area for user input, and a button for evaluating responses.
+   - The results are displayed with appropriate styling to indicate the relevance of the AI response.
+
+## How to Run
+
+1. **Clone the Repository**:
+   ```sh
+   git clone https://github.com/yourusername/ai-response-evaluator.git
+   cd ai-response-evaluator
+   ```
+
+2. **Install Dependencies**:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Application**:
+   ```sh
+   streamlit run app.py
+   ```
+
+## Dependencies
+
+- `torch`: PyTorch for model handling and computations.
+- `streamlit`: Streamlit for building the web application.
+- `transformers`: Hugging Face Transformers for model and tokenizer handling.
+- `datasets`: For handling datasets (if needed).
+
+## Author
+
+Built using Streamlit & PyTorch. Created by **St125050**.
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
